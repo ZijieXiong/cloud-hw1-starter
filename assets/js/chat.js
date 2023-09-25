@@ -51,8 +51,8 @@ $(document).ready(function() {
       .then((response) => {
         console.log(response);
         var data = response.data;
-
-        if (data.messages && data.messages.length > 0) {
+        insertResponseMessage(data.body);
+        /*if (data.messages && data.messages.length > 0) {
           console.log('received ' + data.messages.length + ' messages');
 
           var messages = data.messages;
@@ -79,7 +79,7 @@ $(document).ready(function() {
           }
         } else {
           insertResponseMessage('Oops, something went wrong. Please try again.');
-        }
+        }*/
       })
       .catch((error) => {
         console.log('an error occurred', error);
